@@ -1,0 +1,35 @@
+C:\Users\prime\Documents\simatom\
+├── app/
+│   ├── layout.tsx              ← Root layout (font, metadata, global CSS)
+│   ├── page.tsx                ← Halaman utama (menyusun semua komponen)
+│   ├── globals.css             ← Global CSS + scrollbar + animasi
+│   └── favicon.ico
+│
+├── components/
+│   ├── SimulationPanel.tsx     ← Sidebar kiri: info atom, slider kontrol visual
+│   ├── PeriodicTableModal.tsx  ← Modal tabel periodik 118 unsur
+│   ├── AtomInfoModal.tsx       ← Modal popup "Teori Dasar Atom"
+│   ├── FloatingButtons.tsx     ← Tombol floating (Settings + Info)
+│   └── ThreeCanvas.tsx         ← Three.js 3D canvas (dinamis, no SSR)
+│
+├── components/ai/
+│   ├── ChatFab.tsx             ← Floating action button chat (draggable)
+│   ├── ChatPanel.tsx           ← Panel chat individual (draggable, multi-instance)
+│   ├── ChatPanelsContainer.tsx ← Container semua panel chat
+│   ├── SettingsModal.tsx       ← Modal API Key DeepSeek
+│   └── useDeepSeek.ts          ← Custom hook: fetch, tool calling, message state
+│
+├── lib/
+│   ├── atomData.ts             ← Data 118 unsur (elementRawData)
+│   ├── atomUtils.ts            ← getElectronConfig, getElementData, getGridPos, getBlockColor
+│   └── atomTypes.ts            ← TypeScript interfaces (ElementData, ChatMessage, dll)
+│
+├── hooks/
+│   ├── useAtomStore.ts         ← Zustand global state (atom terpilih, speed, opacity)
+│   └── useThreeJS.ts           ← Custom hook Three.js init + buildAtom + animate
+│
+├── public/
+├── next.config.js
+├── tailwind.config.js
+├── tsconfig.json
+└── package.json
